@@ -13,11 +13,11 @@ $('#principal').height($('#page1').height());
 		audio.preloadFX('la','audio/LA.mp3', function(){},function(e){alert('Error '+e);});
 		audio.preloadFX('si','audio/SI.mp3', function(){},function(e){alert('Error '+e);});
 		
-$('.nota').blind('touchstart',function(){
+$('.nota').bind('touchstart',function(){
 	$(this).addClass('tocada');
 	audio.play($(this).attr('id'));
 	
-    }).blind('touchend',function(){
+    }).bind('touchend',function(){
 	 $(this).removeClass('tocada');
   });
 
